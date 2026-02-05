@@ -1,27 +1,25 @@
 (() => {
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  const year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
 
-  const toggle = document.querySelector(".nav-toggle");
-  const links = document.querySelector(".nav-links");
+  const btn = document.querySelector(".navbtn");
+  const drawer = document.getElementById("drawer");
 
-  if (toggle && links) {
-    toggle.addEventListener("click", () => {
-      const isOpen = links.classList.toggle("show");
-      toggle.setAttribute("aria-expanded", String(isOpen));
+  if (btn && drawer) {
+    btn.addEventListener("click", () => {
+      const isOpen = drawer.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Close menu when clicking a link on mobile
-    links.querySelectorAll("a").forEach(a => {
+    drawer.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => {
-        links.classList.remove("show");
-        toggle.setAttribute("aria-expanded", "false");
+        drawer.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
       });
     });
   }
 
-  // Mailto form helper (no backend required)
-  window.siteMailto = (event) => {
+  window.mailtoForm = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.elements["name"].value.trim();
@@ -30,9 +28,7 @@
 
     const to = "you@yourdomain.com"; // CHANGE THIS
     const subject = encodeURIComponent(`Consulting enquiry — ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`
-    );
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}\n`);
 
     window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     return false;
