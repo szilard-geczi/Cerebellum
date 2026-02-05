@@ -2,7 +2,8 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  const btn = document.querySelector(".menu");
+  // mobile menu
+  const btn = document.querySelector(".nav__menu");
   const drawer = document.getElementById("drawer");
   if (btn && drawer) {
     btn.addEventListener("click", () => {
@@ -17,33 +18,26 @@
     });
   }
 
-  // Simple testimonial slider (1 full-width card at a time)
-  const slides = document.getElementById("slides");
-  const buttons = document.querySelectorAll(".slider__btn");
-  if (slides && buttons.length) {
-    let index = 0;
-    const total = slides.children.length;
+  // testimonial slider (same “one-at-a-time” feel)
+  const q = document.getElementById("quotes");
+  const navBtns = document.querySelectorAll("[data-q]");
+  if (q && navBtns.length) {
+    let idx = 0;
+    const total = q.children.length;
 
     const go = (dir) => {
-      index = (index + dir + total) % total;
-      slides.style.transform = `translateX(${-index * 100}%)`;
-      slides.style.transition = "transform 260ms ease";
+      idx = (idx + dir + total) % total;
+      q.style.transform = `translateX(${-idx * 100}%)`;
+      q.style.transition = "transform 260ms ease";
     };
 
-    buttons.forEach(b => b.addEventListener("click", () => go(Number(b.dataset.dir))));
+    navBtns.forEach(b => b.addEventListener("click", () => go(Number(b.dataset.q))));
   }
 
-  window.mailtoForm = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const name = form.elements["name"].value.trim();
-    const email = form.elements["email"].value.trim();
-    const msg = form.elements["message"].value.trim();
-
-    const to = "you@yourdomain.com"; // change this
-    const subject = encodeURIComponent(`Consulting enquiry — ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}\n`);
-
+  window.mailtoQuick = (label) => {
+    const to = "info@yourdomain.com"; // CHANGE
+    const subject = encodeURIComponent(`${label} — Consulting enquiry`);
+    const body = encodeURIComponent("Hi,\n\nHere’s what’s happening:\n\n- \n\nThanks,\n");
     window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     return false;
   };
