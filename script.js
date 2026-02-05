@@ -26,7 +26,7 @@
     const email = form.elements["email"].value.trim();
     const msg = form.elements["message"].value.trim();
 
-    const to = "you@yourdomain.com"; // CHANGE THIS
+    const to = "you@yourdomain.com"; // change this
     const subject = encodeURIComponent(`Consulting enquiry — ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}\n`);
 
