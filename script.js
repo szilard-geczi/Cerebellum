@@ -1,4 +1,5 @@
 (() => {
+  // year
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
@@ -18,22 +19,46 @@
     });
   }
 
-  // testimonial slider (same “one-at-a-time” feel)
-  const q = document.getElementById("quotes");
-  const navBtns = document.querySelectorAll("[data-q]");
-  if (q && navBtns.length) {
+  // testimonial rail
+  const trail = document.getElementById("trail");
+  const tBtns = document.querySelectorAll("[data-t]");
+  if (trail && tBtns.length) {
     let idx = 0;
-    const total = q.children.length;
+    const total = trail.children.length;
 
     const go = (dir) => {
       idx = (idx + dir + total) % total;
-      q.style.transform = `translateX(${-idx * 100}%)`;
-      q.style.transition = "transform 260ms ease";
+      trail.style.transform = `translateX(${-idx * 100}%)`;
+      trail.style.transition = "transform 260ms ease";
     };
 
-    navBtns.forEach(b => b.addEventListener("click", () => go(Number(b.dataset.q))));
+    tBtns.forEach(b => b.addEventListener("click", () => go(Number(b.dataset.t))));
   }
 
+  // scroll reveal
+  const els = document.querySelectorAll(".reveal");
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add("is-in");
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+
+  // subtle “magnetic” button hover (very light)
+  document.querySelectorAll(".btn--mag").forEach((btn) => {
+    const strength = 8;
+    btn.addEventListener("mousemove", (e) => {
+      const r = btn.getBoundingClientRect();
+      const dx = (e.clientX - (r.left + r.width/2)) / (r.width/2);
+      const dy = (e.clientY - (r.top + r.height/2)) / (r.height/2);
+      btn.style.transform = `translate(${dx*strength}px, ${dy*strength}px)`;
+    });
+    btn.addEventListener("mouseleave", () => {
+      btn.style.transform = "";
+    });
+  });
+
+  // CTA mailto
   window.mailtoQuick = (label) => {
     const to = "info@yourdomain.com"; // CHANGE
     const subject = encodeURIComponent(`${label} — Consulting enquiry`);

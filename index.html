@@ -6,12 +6,12 @@
   <title>[Your Name] — Fix • Choose • Deliver</title>
   <meta name="description" content="Operator-led consulting for hotels & restaurants: fix recurring issues, choose the right tools (POS/PMS/ATS), deliver change that sticks." />
   <meta name="theme-color" content="#EEE9E3" />
-
-  <!-- “Helvetica Neue feel”: system stack -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <div class="grain" aria-hidden="true"></div>
+
   <header class="nav">
     <div class="container nav__inner">
       <a class="nav__brand" href="#top">[Your Name]</a>
@@ -35,16 +35,18 @@
   </header>
 
   <main id="top">
-
     <!-- HERO -->
     <section class="hero">
       <div class="container hero__grid">
-        <div class="hero__copy">
-          <p class="sub">Our services help you create operational clarity and solve recurring problems objectively — strategy, technology and delivery.</p>
+
+        <div class="hero__copy reveal">
+          <p class="sub">
+            Operator-led consulting for hotels & restaurants — remove recurring issues, pick the right tools (POS/PMS/ATS),
+            and deliver change properly.
+          </p>
 
           <h1 class="h0">
-            Fix. Choose.<br />
-            Deliver.
+            Fix. Choose.<br />Deliver.
           </h1>
 
           <div class="hero__lines">
@@ -53,187 +55,202 @@
             <div class="h1line">Implement properly.</div>
           </div>
 
-          <p class="p2">
-            Operator-led consulting for hotels & restaurants. The output is a better-run business — not more reporting.
-          </p>
-
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#contact">Book a Call</a>
-            <a class="btn btn--ghost" href="#services">Learn more</a>
+            <a class="btn btn--primary btn--mag" href="#contact">Book a Call</a>
+            <a class="btn btn--ghost btn--mag" href="#services">Learn more</a>
+          </div>
+
+          <div class="chips">
+            <span class="chip">
+              <span class="i i--accent" aria-hidden="true"></span> POS
+            </span>
+            <span class="chip">
+              <span class="i i--dark" aria-hidden="true"></span> PMS
+            </span>
+            <span class="chip">
+              <span class="i i--grey" aria-hidden="true"></span> ATS
+            </span>
+            <span class="chip">
+              <span class="i i--accent" aria-hidden="true"></span> Payroll / Tronc
+            </span>
           </div>
         </div>
 
-        <aside class="hero__media">
-          <div class="mediaCard">
-            <div class="mediaCard__top">
+        <!-- Bento column -->
+        <aside class="hero__bento">
+          <div class="bento bento--tall reveal">
+            <div class="bento__top">
               <span class="pill">Latest</span>
               <span class="pill pill--accent">2026</span>
             </div>
 
-            <!-- Placeholder “video card” like Mitchy — replace later with real embed -->
-            <div class="fakeVideo" aria-label="Video placeholder">
-              <div class="fakeVideo__badge">Latest project</div>
-              <div class="fakeVideo__play">▶</div>
+            <div class="media">
+              <img src="assets/poster-1.svg" alt="" />
+              <div class="media__overlay">
+                <div class="media__tag">Featured</div>
+                <button class="media__play" type="button" aria-label="Play">▶</button>
+              </div>
             </div>
 
-            <div class="skills">
-              <div class="skill">POS</div>
-              <div class="skill">PMS</div>
-              <div class="skill">ATS</div>
-              <div class="skill">Payroll</div>
-              <div class="skill">SOPs</div>
+            <div class="bento__row">
+              <div class="mini">
+                <div class="mini__k">Fix</div>
+                <div class="mini__v">Root cause</div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">Choose</div>
+                <div class="mini__v">Vendor-agnostic</div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">Deliver</div>
+                <div class="mini__v">Adoption</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento bento--wide reveal">
+            <img class="thumb" src="assets/poster-2.svg" alt="" />
+            <div class="bento__copy">
+              <div class="bento__k">What I’m good for</div>
+              <div class="bento__t">Decision + delivery</div>
+              <div class="bento__d">Not theatre. The output is a better-run business.</div>
+            </div>
+          </div>
+
+          <div class="bento reveal">
+            <img class="thumb" src="assets/poster-3.svg" alt="" />
+            <div class="bento__copy">
+              <div class="bento__k">Common trigger</div>
+              <div class="bento__t">“Same issue again”</div>
+              <div class="bento__d">It repeats because the cause was never removed.</div>
             </div>
           </div>
         </aside>
+
       </div>
     </section>
 
-    <!-- BIG MARQUEE (Mitchy has the huge repeated line) -->
+    <!-- BIG MARQUEE -->
     <section class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>Work Smarter. Stronger. Better. Faster. Greater.</span>
-        <span>Work Smarter. Stronger. Better. Faster. Greater.</span>
-        <span>Work Smarter. Stronger. Better. Faster. Greater.</span>
+        <span>WORK SMARTER. STRONGER. BETTER. FASTER. GREATER.</span>
+        <span>WORK SMARTER. STRONGER. BETTER. FASTER. GREATER.</span>
+        <span>WORK SMARTER. STRONGER. BETTER. FASTER. GREATER.</span>
+        <span>WORK SMARTER. STRONGER. BETTER. FASTER. GREATER.</span>
       </div>
     </section>
 
     <!-- SERVICES -->
     <section class="section" id="services">
       <div class="container">
-        <div class="section__head">
+        <div class="section__head reveal">
           <h2 class="h2">What I work on</h2>
           <p class="p2">Fix what repeats. Choose what matters. Deliver what sticks.</p>
         </div>
 
         <div class="cards">
-          <article class="card">
-            <div class="card__k">Fix</div>
+          <article class="card lift reveal">
+            <div class="card__k">
+              <span class="dot dot--accent"></span> Fix
+            </div>
             <h3 class="h3">Recurring issues</h3>
-            <p class="p3">Root-cause analysis across process, people, and platform — then controls that survive turnover.</p>
+            <p class="p3">Root-cause across process, people, platform. Controls that survive turnover.</p>
+            <div class="card__meta">
+              <span class="tag">Ops</span><span class="tag">Controls</span><span class="tag">SOPs</span>
+            </div>
           </article>
 
-          <article class="card">
-            <div class="card__k">Choose</div>
+          <article class="card card--accent lift reveal">
+            <div class="card__k">
+              <span class="dot dot--dark"></span> Choose
+            </div>
             <h3 class="h3">System decisions</h3>
-            <p class="p3">POS / PMS / ATS / payroll tooling — requirements, shortlist, evaluation, decision rationale.</p>
+            <p class="p3">POS / PMS / ATS / payroll tooling. Requirements, shortlist, scoring, rationale.</p>
+            <div class="card__meta">
+              <span class="tag">POS</span><span class="tag">PMS</span><span class="tag">ATS</span>
+            </div>
           </article>
 
-          <article class="card">
-            <div class="card__k">Deliver</div>
+          <article class="card lift reveal">
+            <div class="card__k">
+              <span class="dot dot--grey"></span> Deliver
+            </div>
             <h3 class="h3">Implementation</h3>
-            <p class="p3">Rollout planning, team adoption, go-live support, stabilisation and operating routines.</p>
+            <p class="p3">Rollout planning, adoption, go-live support, stabilisation routines.</p>
+            <div class="card__meta">
+              <span class="tag">Training</span><span class="tag">Go-live</span><span class="tag">Stability</span>
+            </div>
           </article>
 
-          <article class="card">
-            <div class="card__k">Support</div>
+          <article class="card lift reveal">
+            <div class="card__k">
+              <span class="dot dot--accent"></span> Support
+            </div>
             <h3 class="h3">Fractional operator</h3>
-            <p class="p3">Weekly priorities, escalation handling, vendor management, continuous improvement pipeline.</p>
+            <p class="p3">Weekly priorities, escalation handling, vendor management, improvement pipeline.</p>
+            <div class="card__meta">
+              <span class="tag">Governance</span><span class="tag">Comms</span><span class="tag">Ownership</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIAL STRIP -->
-    <section class="section section--grey">
+    <!-- TESTIMONIALS -->
+    <section class="section section--grey" id="work">
       <div class="container">
-        <div class="section__head">
+        <div class="section__head reveal">
           <h2 class="h2">Testimonials</h2>
+          <p class="p2">Replace these later with real quotes.</p>
         </div>
 
-        <div class="quotes" id="quotes">
-          <article class="quote">
-            <p class="p1">“We stopped firefighting the same issues. Delivery was the difference.”</p>
-            <div class="quote__by">
-              <div class="avatar"></div>
-              <div>
-                <div class="by__name">GM</div>
-                <div class="by__role">Boutique hotel</div>
-              </div>
-            </div>
-          </article>
+        <div class="tWrap reveal">
+          <button class="tBtn" type="button" data-t="-1" aria-label="Previous">‹</button>
 
-          <article class="quote">
-            <p class="p1">“System choice was disciplined. Rollout didn’t implode. That alone paid for it.”</p>
-            <div class="quote__by">
-              <div class="avatar"></div>
-              <div>
-                <div class="by__name">Owner</div>
-                <div class="by__role">Hospitality group</div>
+          <div class="tRail" id="trail">
+            <article class="tCard">
+              <p class="p1">“We stopped firefighting the same issues. Delivery was the difference.”</p>
+              <div class="tBy">
+                <div class="avatar"></div>
+                <div>
+                  <div class="by__name">GM</div>
+                  <div class="by__role">Boutique hotel</div>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="quote">
-            <p class="p1">“It wasn’t advice. It got implemented and held.”</p>
-            <div class="quote__by">
-              <div class="avatar"></div>
-              <div>
-                <div class="by__name">Ops Lead</div>
-                <div class="by__role">Restaurant</div>
+            <article class="tCard">
+              <p class="p1">“System choice was disciplined. Rollout didn’t implode. That alone paid for it.”</p>
+              <div class="tBy">
+                <div class="avatar"></div>
+                <div>
+                  <div class="by__name">Owner</div>
+                  <div class="by__role">Hospitality group</div>
+                </div>
               </div>
-            </div>
-          </article>
-        </div>
+            </article>
 
-        <div class="quoteNav">
-          <button class="btn btn--ghost" data-q="-1">Prev</button>
-          <button class="btn btn--primary" data-q="1">Next</button>
+            <article class="tCard">
+              <p class="p1">“It wasn’t advice. It got implemented and held.”</p>
+              <div class="tBy">
+                <div class="avatar"></div>
+                <div>
+                  <div class="by__name">Ops Lead</div>
+                  <div class="by__role">Restaurant</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button class="tBtn" type="button" data-t="1" aria-label="Next">›</button>
         </div>
       </div>
     </section>
 
-    <!-- BENEFITS (6 grid like Mitchy) -->
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Ready to unlock these benefits?</h2>
-          <p class="p2">No hidden costs in decision-making: clarity, ownership, and delivery.</p>
-        </div>
-
-        <div class="benefits">
-          <div class="benefit">
-            <div class="benefit__icon">■</div>
-            <div class="benefit__t">Fixed Scope</div>
-            <div class="p3">Clear deliverables and boundaries.</div>
-          </div>
-
-          <div class="benefit">
-            <div class="benefit__icon">∞</div>
-            <div class="benefit__t">Unlimited Iteration</div>
-            <div class="p3">Refine decisions until they’re right.</div>
-          </div>
-
-          <div class="benefit">
-            <div class="benefit__icon">⚡</div>
-            <div class="benefit__t">Quick Turnaround</div>
-            <div class="p3">Fast cycles without chaos.</div>
-          </div>
-
-          <div class="benefit">
-            <div class="benefit__icon">✦</div>
-            <div class="benefit__t">Expert Delivery</div>
-            <div class="p3">Operator-led implementation.</div>
-          </div>
-
-          <div class="benefit">
-            <div class="benefit__icon">◎</div>
-            <div class="benefit__t">Vendor-Agnostic</div>
-            <div class="p3">Fit-first evaluation. No commissions.</div>
-          </div>
-
-          <div class="benefit">
-            <div class="benefit__icon">☰</div>
-            <div class="benefit__t">Seamless Comms</div>
-            <div class="p3">Simple, consistent updates.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ + SIDE IMAGE BLOCK -->
+    <!-- FAQ -->
     <section class="section section--cream" id="faq">
       <div class="container faqGrid">
-        <div>
+        <div class="reveal">
           <h2 class="h2">Frequently asked questions</h2>
           <p class="p2">Click to expand.</p>
 
@@ -244,7 +261,7 @@
 
           <details class="qa">
             <summary>Do you recommend vendors?</summary>
-            <div class="p3">Yes, but requirements-first and vendor-agnostic.</div>
+            <div class="p3">Yes — requirements-first and vendor-agnostic. No commissions.</div>
           </details>
 
           <details class="qa">
@@ -258,18 +275,18 @@
           </details>
         </div>
 
-        <div class="faqImage" aria-label="FAQ image placeholder"></div>
+        <div class="faqImage reveal" aria-label="FAQ image placeholder"></div>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="cta" id="contact">
-      <div class="container cta__inner">
+      <div class="container cta__inner reveal">
         <h2 class="h2">Just one more step.</h2>
         <p class="p2">Click either button below to get started.</p>
         <div class="cta__buttons">
-          <a class="btn btn--primary" href="#" onclick="return window.mailtoQuick('Book a call')">Book a Call</a>
-          <a class="btn btn--ghost" href="#" onclick="return window.mailtoQuick('Get started')">Get Started Today</a>
+          <a class="btn btn--primary btn--mag" href="#" onclick="return window.mailtoQuick('Book a call')">Book a Call</a>
+          <a class="btn btn--ghost btn--mag" href="#" onclick="return window.mailtoQuick('Get started')">Get Started Today</a>
         </div>
       </div>
     </section>
