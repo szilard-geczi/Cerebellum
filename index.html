@@ -3,106 +3,270 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fix • Choose • Deliver</title>
+  <title>[Your Name] — Hospitality Operator-Led Consulting</title>
+  <meta name="description" content="Fix recurring issues. Choose the right systems. Deliver change that sticks (POS, PMS, ATS, payroll, processes)." />
+  <meta name="theme-color" content="#fbf8f2" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <main>
+  <a class="skip" href="#main">Skip</a>
 
+  <header class="top">
+    <div class="wrap top__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true">●</span>
+        <span class="brand__text">[Your Name]</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#help">How I help</a>
+        <a href="#work">Work</a>
+        <a href="#contact" class="btn btn--small">Contact</a>
+      </nav>
+
+      <button class="menu" aria-expanded="false" aria-controls="drawer">Menu</button>
+    </div>
+
+    <div class="drawer" id="drawer">
+      <a href="#about">About</a>
+      <a href="#help">How I help</a>
+      <a href="#work">Work</a>
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="top">
       <div class="wrap">
-        <p class="eyebrow">HOTELS • RESTAURANTS • OPERATOR-LED CHANGE</p>
+        <p class="hello">Hi, I’m <strong>[Your Name]</strong></p>
 
-        <h1>
-          Fix the problem.<br>
-          Choose the right move.<br>
-          <span>Deliver it properly.</span>
+        <h1 class="h1">
+          I help hotel & restaurant owners<br>
+          <span class="h1__line">fix recurring issues</span>
+          <span class="h1__line">choose the right systems</span>
+          <span class="h1__line">deliver change properly</span>
         </h1>
 
-        <div class="hero-actions">
-          <a href="#" class="btn primary">Fix what’s breaking</a>
-          <a href="#" class="btn ghost">Choosing new systems</a>
+        <p class="lead">
+          Operator-led consulting. No theatre. If it doesn’t survive staff turnover, it doesn’t count.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn--solid" href="#contact">Say hello</a>
+          <a class="btn btn--ghost" href="#help">What I do</a>
+        </div>
+
+        <div class="quick">
+          <span class="pill">POS</span>
+          <span class="pill">PMS</span>
+          <span class="pill">ATS</span>
+          <span class="pill">Payroll / Tronc</span>
+          <span class="pill">SOPs & Controls</span>
         </div>
       </div>
     </section>
 
-    <!-- DIVIDER -->
-    <section class="divider">
-      <span>The same issues don’t repeat by accident.</span>
-    </section>
-
-    <!-- MODEL -->
-    <section class="model">
-      <div class="wrap grid-3">
-
-        <div class="block">
-          <h2>Fix</h2>
-          <p>Identify what keeps breaking — and why.</p>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap two">
+        <div>
+          <h2 class="h2">Independent. Hands-on. Built for hospitality.</h2>
+          <p class="muted">
+            I’m brought in when the same problems keep reappearing, or when a major decision needs to be made
+            (new POS, PMS, ATS, payroll tooling, or operating routines) and the business wants it done cleanly.
+          </p>
+          <p class="muted">
+            I help you decide the best course of action — then I help you implement it.
+          </p>
         </div>
 
-        <div class="block">
-          <h2>Choose</h2>
-          <p>Decide the right action: process, system, or structure.</p>
+        <div class="card card--soft">
+          <p class="kicker">Typical outcomes</p>
+          <ul class="list">
+            <li>Recurring failures stop repeating</li>
+            <li>System changes delivered without chaos</li>
+            <li>Teams follow routines that hold up under pressure</li>
+            <li>Owners make decisions with confidence</li>
+          </ul>
         </div>
-
-        <div class="block">
-          <h2>Deliver</h2>
-          <p>Implement change so it actually sticks.</p>
-        </div>
-
       </div>
     </section>
 
-    <!-- STATEMENT -->
-    <section class="statement">
+    <!-- LOGO WALL (optional) -->
+    <section class="section section--tight" aria-label="Logos">
       <div class="wrap">
-        <h3>
-          I don’t build dashboards.<br>
-          I remove the reasons you need them.
-        </h3>
+        <p class="kicker">Some teams I’ve supported (replace with your own or remove)</p>
+        <div class="logos">
+          <div class="logo">Hotel Group</div>
+          <div class="logo">Restaurant</div>
+          <div class="logo">Boutique Hotel</div>
+          <div class="logo">Brasserie</div>
+          <div class="logo">Resort</div>
+          <div class="logo">Cafe</div>
+          <div class="logo">Pub</div>
+          <div class="logo">Events</div>
+          <div class="logo">Multi-site</div>
+          <div class="logo">Venue</div>
+          <div class="logo">Bar</div>
+          <div class="logo">Kitchen</div>
+        </div>
       </div>
     </section>
 
-    <!-- SCENARIOS -->
-    <section class="scenarios">
-      <div class="wrap grid-2">
-
-        <div class="card">
-          <h4>Recurring issues</h4>
-          <p>Same problems. Different week.</p>
-        </div>
-
-        <div class="card">
-          <h4>System decisions</h4>
-          <p>POS • PMS • ATS • Payroll</p>
-        </div>
-
-        <div class="card">
-          <h4>Change that fails</h4>
-          <p>Good intent. Poor delivery.</p>
-        </div>
-
-        <div class="card">
-          <h4>Operator support</h4>
-          <p>An adult in the room.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
+    <!-- STATS -->
+    <section class="section section--alt" id="work">
       <div class="wrap">
-        <h3>If something keeps breaking, it’s time to fix it properly.</h3>
-        <a href="#" class="btn primary large">Start a conversation</a>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__num">✓</div>
+            <div class="stat__title">System decisions</div>
+            <div class="stat__desc">POS / PMS / ATS selection & rollout</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">✓</div>
+            <div class="stat__title">Recurring issues</div>
+            <div class="stat__desc">Root-cause + controls that stick</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">✓</div>
+            <div class="stat__title">Delivery</div>
+            <div class="stat__desc">Implementation + adoption + stabilisation</div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- WHAT I CAN PROVIDE (numbered blocks) -->
+    <section class="section" id="help">
+      <div class="wrap">
+        <h2 class="h2">What I can provide</h2>
+        <p class="muted">
+          Fix → Choose → Deliver. Pick one, or run the full sequence.
+        </p>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step__num">01</div>
+            <h3 class="h3">Fix recurring issues</h3>
+            <ul class="list">
+              <li>Identify the repeat failures (process / people / platform)</li>
+              <li>Root-cause analysis (not symptoms)</li>
+              <li>Controls and ownership to prevent regression</li>
+              <li>SOPs managers will actually follow</li>
+            </ul>
+          </article>
+
+          <article class="step">
+            <div class="step__num">02</div>
+            <h3 class="h3">Choose the best course of action</h3>
+            <ul class="list">
+              <li>Define what “good” looks like (requirements)</li>
+              <li>Shortlist options (POS / PMS / ATS / payroll tools)</li>
+              <li>Vendor evaluation and decision support</li>
+              <li>Rationale, risks, sequencing</li>
+            </ul>
+          </article>
+
+          <article class="step">
+            <div class="step__num">03</div>
+            <h3 class="h3">Deliver the change</h3>
+            <ul class="list">
+              <li>Implementation plan and governance</li>
+              <li>Team training and adoption</li>
+              <li>Go-live support and stabilisation</li>
+              <li>Post-change routines so it holds</li>
+            </ul>
+          </article>
+
+          <article class="step">
+            <div class="step__num">04</div>
+            <h3 class="h3">Fractional operator support</h3>
+            <ul class="list">
+              <li>Weekly priority setting and escalation handling</li>
+              <li>Vendor / agency management</li>
+              <li>Continuous improvement pipeline</li>
+              <li>“Adult in the room” accountability</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ENGAGE -->
+    <section class="section section--alt">
+      <div class="wrap">
+        <h2 class="h2">Why engage an independent operator?</h2>
+        <div class="reasons">
+          <div class="reason">
+            <div class="reason__num">01</div>
+            <h3 class="h3">Make confident decisions</h3>
+            <p class="muted">Stop guessing. Decide based on reality, risk, and sequencing.</p>
+          </div>
+          <div class="reason">
+            <div class="reason__num">02</div>
+            <h3 class="h3">Avoid the wrong system</h3>
+            <p class="muted">Sales demos are easy. Requirements and rollout discipline are the hard part.</p>
+          </div>
+          <div class="reason">
+            <div class="reason__num">03</div>
+            <h3 class="h3">Fix the cause, not the symptom</h3>
+            <p class="muted">If the same issue returns next month, the job wasn’t finished.</p>
+          </div>
+          <div class="reason">
+            <div class="reason__num">04</div>
+            <h3 class="h3">Delivery that sticks</h3>
+            <p class="muted">Implementation + adoption + controls. Otherwise it’s just a plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap contact">
+        <div>
+          <h2 class="h2">Say hello</h2>
+          <p class="muted">Send a short message. I’ll reply with next steps (or tell you it’s not a fit).</p>
+
+          <div class="contactBox">
+            <p><strong>Email:</strong> <a class="link" href="mailto:you@yourdomain.com">you@yourdomain.com</a></p>
+            <p><strong>LinkedIn:</strong> <a class="link" href="#" target="_blank" rel="noreferrer">Add your link</a></p>
+          </div>
+        </div>
+
+        <form class="form" onsubmit="return window.mailtoForm(event)">
+          <label>
+            Name
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            What’s happening?
+            <textarea name="message" rows="6" required placeholder="e.g., recurring issue / choosing POS/PMS/ATS / implementation failing"></textarea>
+          </label>
+          <button class="btn btn--solid" type="submit">Send</button>
+          <p class="muted tiny">No backend. This opens your email client.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <p class="muted tiny">© <span id="year"></span> [Your Name]</p>
+        <a class="muted tiny" href="#top">Back to top</a>
+      </div>
+    </footer>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
