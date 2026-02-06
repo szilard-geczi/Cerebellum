@@ -1,65 +1,77 @@
 (() => {
-  // year
+  // =========================
+  // YEAR
+  // =========================
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // mobile menu
-  const btn = document.querySelector(".nav__menu");
+  // =========================
+  // MOBILE DRAWER
+  // =========================
+  const menuBtn = document.getElementById("menuBtn");
   const drawer = document.getElementById("drawer");
-  if (btn && drawer) {
-    btn.addEventListener("click", () => {
-      const isOpen = drawer.classList.toggle("open");
-      btn.setAttribute("aria-expanded", String(isOpen));
+
+  if (menuBtn && drawer) {
+    menuBtn.addEventListener("click", () => {
+      const open = drawer.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
     });
+
     drawer.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => {
         drawer.classList.remove("open");
-        btn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-expanded", "false");
       });
     });
   }
 
-  // testimonial rail
-  const trail = document.getElementById("trail");
-  const tBtns = document.querySelectorAll("[data-t]");
-  if (trail && tBtns.length) {
-    let idx = 0;
-    const total = trail.children.length;
-    const go = (dir) => {
-      idx = (idx + dir + total) % total;
-      trail.style.transform = `translateX(${-idx * 100}%)`;
-      trail.style.transition = "transform 260ms ease";
-    };
-    tBtns.forEach(b => b.addEventListener("click", () => go(Number(b.dataset.t))));
+  // =========================
+  // PAGES DROPDOWN (DESKTOP)
+  // =========================
+  const pagesBtn = document.getElementById("pagesBtn");
+  const pagesMenu = document.getElementById("pagesMenu");
+
+  if (pagesBtn && pagesMenu) {
+    pagesBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const hidden = pagesMenu.hasAttribute("hidden");
+      if (hidden) pagesMenu.removeAttribute("hidden");
+      else pagesMenu.setAttribute("hidden", "");
+      pagesBtn.setAttribute("aria-expanded", String(hidden));
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!pagesMenu.contains(e.target) && !pagesBtn.contains(e.target)) {
+        pagesMenu.setAttribute("hidden", "");
+        pagesBtn.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
-  // scroll reveal
-  const els = document.querySelectorAll(".reveal");
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add("is-in");
-    });
-  }, { threshold: 0.12 });
-  els.forEach(el => io.observe(el));
+  // =========================
+  // HERO IMAGE EMPTY STATE
+  // =========================
+  const frame = document.getElementById("heroFrame");
+  const img = frame ? frame.querySelector("img") : null;
 
-  // subtle “magnetic” buttons
-  document.querySelectorAll(".btn--mag").forEach((b) => {
-    const strength = 8;
-    b.addEventListener("mousemove", (e) => {
-      const r = b.getBoundingClientRect();
-      const dx = (e.clientX - (r.left + r.width/2)) / (r.width/2);
-      const dy = (e.clientY - (r.top + r.height/2)) / (r.height/2);
-      b.style.transform = `translate(${dx*strength}px, ${dy*strength}px)`;
+  if (frame && img) {
+    img.addEventListener("error", () => frame.classList.add("is-empty"));
+    if (!img.getAttribute("src")) frame.classList.add("is-empty");
+  }
+
+  // =========================
+  // MAILTO BUTTONS
+  // =========================
+  const mailBtns = document.querySelectorAll("[data-mailto]");
+  const to = "info@yourdomain.com"; // CHANGE THIS
+
+  mailBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const label = btn.getAttribute("data-mailto") || "Enquiry";
+      const subject = encodeURIComponent(`${label} — Consulting enquiry`);
+      const body = encodeURIComponent("Hi,\n\nHere’s what’s happening:\n\n- \n\nThanks,\n");
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
-    b.addEventListener("mouseleave", () => { b.style.transform = ""; });
   });
-
-  // CTA mailto
-  window.mailtoQuick = (label) => {
-    const to = "info@yourdomain.com"; // CHANGE THIS
-    const subject = encodeURIComponent(`${label} — Consulting enquiry`);
-    const body = encodeURIComponent("Hi,\n\nHere’s what’s happening:\n\n- \n\nThanks,\n");
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    return false;
-  };
 })();
