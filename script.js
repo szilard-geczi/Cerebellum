@@ -25,13 +25,11 @@
   if (trail && tBtns.length) {
     let idx = 0;
     const total = trail.children.length;
-
     const go = (dir) => {
       idx = (idx + dir + total) % total;
       trail.style.transform = `translateX(${-idx * 100}%)`;
       trail.style.transition = "transform 260ms ease";
     };
-
     tBtns.forEach(b => b.addEventListener("click", () => go(Number(b.dataset.t))));
   }
 
@@ -44,23 +42,21 @@
   }, { threshold: 0.12 });
   els.forEach(el => io.observe(el));
 
-  // subtle “magnetic” button hover (very light)
-  document.querySelectorAll(".btn--mag").forEach((btn) => {
+  // subtle “magnetic” buttons
+  document.querySelectorAll(".btn--mag").forEach((b) => {
     const strength = 8;
-    btn.addEventListener("mousemove", (e) => {
-      const r = btn.getBoundingClientRect();
+    b.addEventListener("mousemove", (e) => {
+      const r = b.getBoundingClientRect();
       const dx = (e.clientX - (r.left + r.width/2)) / (r.width/2);
       const dy = (e.clientY - (r.top + r.height/2)) / (r.height/2);
-      btn.style.transform = `translate(${dx*strength}px, ${dy*strength}px)`;
+      b.style.transform = `translate(${dx*strength}px, ${dy*strength}px)`;
     });
-    btn.addEventListener("mouseleave", () => {
-      btn.style.transform = "";
-    });
+    b.addEventListener("mouseleave", () => { b.style.transform = ""; });
   });
 
   // CTA mailto
   window.mailtoQuick = (label) => {
-    const to = "info@yourdomain.com"; // CHANGE
+    const to = "info@yourdomain.com"; // CHANGE THIS
     const subject = encodeURIComponent(`${label} — Consulting enquiry`);
     const body = encodeURIComponent("Hi,\n\nHere’s what’s happening:\n\n- \n\nThanks,\n");
     window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
