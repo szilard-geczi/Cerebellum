@@ -40,7 +40,7 @@ a{color:inherit; text-decoration:none}
 /* Typography rhythm (tracking -0.04em is key) */
 .h0{
   font-weight:800;
-  font-size: clamp(64px, 7vw, 170px);
+  font-size: clamp(94px, 9.6vw, 240px);
   line-height:1;
   letter-spacing:-0.04em;
   margin: 0 0 10px;
