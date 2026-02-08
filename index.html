@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,10 +10,16 @@
 </head>
 
 <body>
+  <!-- Background layers (pure white + very light lavender wash + grain) -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__wash"></div>
+    <div class="bg__grain"></div>
+  </div>
+
   <!-- =========================
        NAV (Sunsama-style)
        ========================= -->
-  <header class="nav">
+  <header class="nav" id="top">
     <div class="container nav__inner">
       <a class="brand" href="#top" aria-label="Home">
         <span class="brand__dot" aria-hidden="true"></span>
@@ -21,7 +28,7 @@
 
       <nav class="nav__links" aria-label="Primary">
         <a href="#services">Services</a>
-        <a href="#work">Approach</a>
+        <a href="#approach">Approach</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -29,6 +36,7 @@
       <div class="nav__actions">
         <a class="btn btn--ghost" href="#contact">Login</a>
         <a class="btn btn--primary" href="#contact">Start Here</a>
+
         <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
           <span></span><span></span><span></span>
         </button>
@@ -38,16 +46,16 @@
     <!-- Mobile drawer -->
     <div class="drawer" id="drawer">
       <a href="#services">Services</a>
-      <a href="#work">Approach</a>
+      <a href="#approach">Approach</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
       <a class="btn btn--primary btn--full" href="#contact">Start Here</a>
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <!-- =========================
-         HERO (Sunsama-style)
+         HERO (Sunsama feel)
          ========================= -->
     <section class="hero">
       <div class="container hero__grid">
@@ -65,7 +73,8 @@
           </h1>
 
           <p class="subhead">
-            I help owners stop repeat failures, pick the right tools (POS/PMS/ATS), and implement properly so it survives staff turnover.
+            Practical support for owners who want fewer repeat failures, better decisions on tools (POS/PMS/ATS),
+            and rollouts that actually stick.
           </p>
 
           <div class="hero__cta">
@@ -74,11 +83,11 @@
           </div>
 
           <p class="note">
-            Practical, low-drama support. If it doesn’t stick in real operations, it doesn’t count.
+            If it doesn’t survive staff turnover, it doesn’t count.
           </p>
 
           <div class="logos">
-            <span class="logos__label">Trusted by teams who value execution</span>
+            <span class="logos__label">Built for real hospitality teams</span>
             <div class="logos__row" aria-hidden="true">
               <span class="logoPill">Hotels</span>
               <span class="logoPill">Restaurants</span>
@@ -90,13 +99,14 @@
         </div>
 
         <div class="hero__media">
-          <div class="appFrame">
+          <div class="appFrame" id="heroFrame">
             <div class="appFrame__top">
               <span class="appDot"></span><span class="appDot"></span><span class="appDot"></span>
-              <span class="appFrame__title">Operational Dashboard (example)</span>
+              <span class="appFrame__title">Operational view (example)</span>
             </div>
 
             <div class="appFrame__body">
+              <!-- Replace this mock with a real screenshot when ready -->
               <div class="mockGrid">
                 <div class="mockCol">
                   <div class="mockCard mockCard--thin"></div>
@@ -134,13 +144,13 @@
     </section>
 
     <!-- =========================
-         PROBLEM / SOLUTION CARDS
+         PROBLEM / OUTCOME
          ========================= -->
     <section class="split">
       <div class="container split__grid">
-        <article class="card card--warn">
+        <article class="card card--soft">
           <div class="emoji" aria-hidden="true">😵‍💫</div>
-          <h3 class="h3">Work gets chaotic</h3>
+          <h3 class="h3">Where teams get stuck</h3>
           <ul class="list">
             <li>“Same issue again” (because the cause never moved)</li>
             <li>Systems chosen on demos, not requirements</li>
@@ -148,13 +158,13 @@
           </ul>
         </article>
 
-        <article class="card card--calm">
-          <div class="brandMark" aria-hidden="true"></div>
-          <h3 class="h3">Make operations calm</h3>
+        <article class="card">
+          <div class="mark" aria-hidden="true"></div>
+          <h3 class="h3">What “good” looks like</h3>
           <ul class="checks">
-            <li>One clear owner per recurring failure</li>
-            <li>Simple SOPs + controls that survive turnover</li>
-            <li>Rollouts designed for adoption, not just “installed”</li>
+            <li>Clear owner per recurring failure</li>
+            <li>SOPs + controls that survive turnover</li>
+            <li>Rollouts designed for adoption</li>
           </ul>
           <a class="btn btn--soft btn--small" href="#contact">Get a quick assessment</a>
         </article>
@@ -162,11 +172,11 @@
     </section>
 
     <!-- =========================
-         SERVICES (Sunsama sections)
+         SERVICES
          ========================= -->
     <section class="section" id="services">
       <div class="container">
-        <div class="section__kicker">
+        <div class="kickerRow">
           <span class="pillKicker">Services</span>
         </div>
 
@@ -174,124 +184,92 @@
           Built for operators.<br>
           Focused on outcomes.
         </h2>
+        <p class="lead">
+          You don’t need more dashboards. You need fewer repeat failures and cleaner execution.
+        </p>
 
         <div class="featureGrid">
           <article class="featureCard">
             <h3 class="h3">Fix recurring failures</h3>
-            <p class="p">
-              Root-cause across people, process, and platform. We remove the trigger, not just the symptom.
-            </p>
-            <div class="featureMini">
-              <span>Issue map</span><span>Owners</span><span>Controls</span>
-            </div>
+            <p class="p">Root-cause across people, process, and platform. Remove the trigger, not just the symptom.</p>
+            <div class="featureMini"><span>Issue map</span><span>Owners</span><span>Controls</span></div>
           </article>
 
           <article class="featureCard">
             <h3 class="h3">Choose the right tools</h3>
-            <p class="p">
-              POS / PMS / ATS decisions using requirements, scoring, vendor management, and contract discipline.
-            </p>
-            <div class="featureMini">
-              <span>Requirements</span><span>Shortlist</span><span>Scorecard</span>
-            </div>
+            <p class="p">POS / PMS / ATS decisions using requirements, scoring, vendor management, and contract discipline.</p>
+            <div class="featureMini"><span>Requirements</span><span>Shortlist</span><span>Scorecard</span></div>
           </article>
 
           <article class="featureCard">
             <h3 class="h3">Deliver change properly</h3>
-            <p class="p">
-              Rollout plans, training, go-live support, and stabilisation cadence. Adoption is the KPI.
-            </p>
-            <div class="featureMini">
-              <span>Training</span><span>Go-live</span><span>Stabilise</span>
-            </div>
+            <p class="p">Rollout plans, training, go-live support, and stabilisation cadence. Adoption is the KPI.</p>
+            <div class="featureMini"><span>Training</span><span>Go-live</span><span>Stabilise</span></div>
           </article>
 
           <article class="featureCard">
             <h3 class="h3">Fractional operator support</h3>
-            <p class="p">
-              Weekly priorities, escalation handling, and a simple operating rhythm so the business runs without heroics.
-            </p>
-            <div class="featureMini">
-              <span>Cadence</span><span>Escalations</span><span>Governance</span>
-            </div>
+            <p class="p">Weekly priorities, escalation handling, and a simple operating rhythm owners actually use.</p>
+            <div class="featureMini"><span>Cadence</span><span>Escalations</span><span>Governance</span></div>
           </article>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         INTEGRATIONS-STYLE LIST
+         APPROACH (rows)
          ========================= -->
-    <section class="section section--soft" id="work">
+    <section class="section section--soft" id="approach">
       <div class="container">
-        <div class="section__kicker">
-          <span class="pillKicker pillKicker--orange">Integrations</span>
+        <div class="kickerRow">
+          <span class="pillKicker pillKicker--lav">Approach</span>
         </div>
 
-        <h2 class="h2">Your tools, integrated.</h2>
+        <h2 class="h2">Simple, disciplined, repeatable.</h2>
         <p class="lead">
-          I work with whatever you have now — and help you move only when the case is clear.
+          We stabilise first, then improve. Move systems only when the case is clear.
         </p>
 
         <div class="rows">
           <div class="rowCard">
-            <div class="rowCard__title">POS</div>
-            <div class="rowCard__desc">Menu engineering, modifiers, reporting, training discipline.</div>
-            <div class="rowCard__icons" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="rowCard__title">Triage</div>
+            <div class="rowCard__desc">Top recurring failures, owners, current cadence, and quick wins.</div>
+            <div class="rowCard__dots" aria-hidden="true"><span></span><span></span><span></span></div>
           </div>
 
           <div class="rowCard">
-            <div class="rowCard__title">PMS</div>
-            <div class="rowCard__desc">Rates, inventory, channels, night audit checks, handover rhythm.</div>
-            <div class="rowCard__icons" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="rowCard__title">Decision</div>
+            <div class="rowCard__desc">Requirements, shortlist, scoring, vendor challenge, contract clarity.</div>
+            <div class="rowCard__dots" aria-hidden="true"><span></span><span></span><span></span></div>
           </div>
 
           <div class="rowCard">
-            <div class="rowCard__title">ATS / Scheduling</div>
-            <div class="rowCard__desc">Hiring pipeline, rota discipline, onboarding and training cadence.</div>
-            <div class="rowCard__icons" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="rowCard__title">Delivery</div>
+            <div class="rowCard__desc">Rollout plan, training, go-live support, stabilisation, adoption checks.</div>
+            <div class="rowCard__dots" aria-hidden="true"><span></span><span></span><span></span></div>
           </div>
 
           <div class="rowCard">
-            <div class="rowCard__title">Finance / Controls</div>
-            <div class="rowCard__desc">Cash discipline, stock controls, weekly ops pack that owners actually use.</div>
-            <div class="rowCard__icons" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="rowCard__title">Rhythm</div>
+            <div class="rowCard__desc">Weekly operating pack, escalation rules, and governance cadence.</div>
+            <div class="rowCard__dots" aria-hidden="true"><span></span><span></span><span></span></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         COMMUNITY (pastel purple)
+         LAVENDER CTA BAND (very light)
          ========================= -->
-    <section class="section section--purple">
-      <div class="container">
-        <div class="community">
-          <div class="community__main">
-            <h2 class="h2">Build calmer operations.</h2>
-            <p class="lead">
-              If you want, I’ll share the exact playbooks I use: issue triage, SOP templates, rollout checklists, and governance.
-            </p>
-            <div class="community__cta">
-              <a class="btn btn--primary" href="#contact">Get the playbooks</a>
-              <a class="btn btn--soft" href="#faq">Read FAQs</a>
-            </div>
-          </div>
-
-          <div class="community__side">
-            <div class="smallCard">
-              <div class="smallCard__k">Included</div>
-              <div class="smallCard__v">Issue triage</div>
-            </div>
-            <div class="smallCard">
-              <div class="smallCard__k">Included</div>
-              <div class="smallCard__v">SOP templates</div>
-            </div>
-            <div class="smallCard">
-              <div class="smallCard__k">Included</div>
-              <div class="smallCard__v">Rollout checklist</div>
-            </div>
-          </div>
+    <section class="lavBand">
+      <div class="container lavBand__inner">
+        <div class="lavBand__copy">
+          <h2 class="lavBand__h2">Calm operations, by design.</h2>
+          <p class="lavBand__p">Book a call and I’ll tell you what I’d fix first — plainly.</p>
+        </div>
+        <div class="lavBand__actions">
+          <a class="btn btn--primary" href="#contact">Start here</a>
+          <a class="btn btn--soft" href="#faq">Read FAQs</a>
         </div>
       </div>
     </section>
@@ -306,49 +284,52 @@
         <div class="faq">
           <details class="qa">
             <summary>Do you only do systems work?</summary>
-            <div class="qa__body">No. Systems are one lever. The priority is to remove repeat failures and stabilise operations.</div>
+            <div class="qa__body">No. Systems are one lever. The priority is removing repeat failures and stabilising the operation.</div>
           </details>
 
           <details class="qa">
             <summary>Do you implement or advise?</summary>
-            <div class="qa__body">Implementation-first. Advice without adoption is wasted money.</div>
+            <div class="qa__body">Implementation-first. Advice without adoption is wasted spend.</div>
           </details>
 
           <details class="qa">
             <summary>What does the first engagement look like?</summary>
-            <div class="qa__body">A short diagnostic: top 10 repeat failures, current tool stack, and a practical 30/60/90 plan.</div>
+            <div class="qa__body">A short diagnostic: top repeat failures, current tool stack, and a practical 30/60/90 plan.</div>
           </details>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         CTA FOOTER (Sunsama-style)
+         CONTACT / BIG CTA
          ========================= -->
     <section class="bigCta" id="contact">
       <div class="container bigCta__inner">
         <div class="badges badges--center">
           <span class="badge">Operator-led</span>
-          <span class="badge">Hotels + Restaurants</span>
           <span class="badge">Implementation-first</span>
+          <span class="badge">Hospitality</span>
         </div>
 
         <h2 class="bigCta__h2">Make every week count.</h2>
-        <p class="bigCta__p">Book a call and I’ll tell you, plainly, what I’d fix first.</p>
+        <p class="bigCta__p">Start with a short call. You’ll leave with a clear next step.</p>
 
         <div class="bigCta__buttons">
-          <a class="btn btn--primary" href="#" data-mailto="Book a call">Start here</a>
-          <a class="btn btn--soft" href="#" data-mailto="General enquiry">Email me</a>
+          <a class="btn btn--primary" href="#" data-mailto="Book a call">Email to book</a>
+          <a class="btn btn--soft" href="#" data-mailto="General enquiry">General enquiry</a>
         </div>
 
-        <p class="tiny">No spam. No fluff. Just a clear next step.</p>
+        <p class="tiny">No spam. No fluff. Clear execution.</p>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container footer__inner">
-        <div class="footer__left">
-          <div class="footer__brand">[Your Name]<span class="brand__dot" aria-hidden="true"></span></div>
+        <div>
+          <div class="footer__brand">
+            <span class="brand__dot" aria-hidden="true"></span>
+            <span>[Your Name]</span>
+          </div>
           <div class="footer__small">Hospitality operations consulting</div>
         </div>
 
@@ -356,14 +337,14 @@
           <div class="footer__col">
             <div class="footer__k">Pages</div>
             <a href="#services">Services</a>
-            <a href="#work">Approach</a>
+            <a href="#approach">Approach</a>
             <a href="#faq">FAQ</a>
           </div>
 
           <div class="footer__col">
             <div class="footer__k">Contact</div>
+            <a href="#contact">Book</a>
             <a href="#" data-mailto="General enquiry">Email</a>
-            <a href="#contact">Book a call</a>
           </div>
         </div>
       </div>

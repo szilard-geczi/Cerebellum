@@ -1,3 +1,4 @@
+// script.js
 (() => {
   // Year
   const y = document.getElementById("year");
