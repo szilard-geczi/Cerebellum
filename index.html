@@ -1,43 +1,46 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>[Your Name] — Hospitality Ops Consulting</title>
-  <meta name="description" content="Operator-led consulting for hotels & restaurants. Stop recurring failures, choose the right systems, and implement change properly." />
+  <title>[Your Name] — Start Calm. Stay Focused. Be Confident.</title>
+  <meta name="description" content="Operator-led consulting for hotels & restaurants. Fix recurring issues, choose the right tools, deliver change properly." />
+
+  <!-- Typography (Sunsama-like) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Background layers (pure white + very light lavender wash + grain) -->
-  <div class="bg" aria-hidden="true">
-    <div class="bg__wash"></div>
-    <div class="bg__grain"></div>
-  </div>
+  <!-- Very light lavender wash (global) -->
+  <div class="bg" aria-hidden="true"></div>
 
   <!-- =========================
-       NAV (Sunsama-style)
+       NAV (Sunsama layout)
        ========================= -->
-  <header class="nav" id="top">
-    <div class="container nav__inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__dot" aria-hidden="true"></span>
-        <span class="brand__name">[Your Name]</span>
+  <header class="nav">
+    <div class="wrap nav__row">
+      <a class="logo" href="#top" aria-label="Home">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">[Your Name]</span>
       </a>
 
       <nav class="nav__links" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="#features">Features</a>
+        <a href="#integrations">Integrations</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
       </nav>
 
       <div class="nav__actions">
-        <a class="btn btn--ghost" href="#contact">Login</a>
-        <a class="btn btn--primary" href="#contact">Start Here</a>
+        <a class="nav__login" href="#contact">Login</a>
+        <a class="btn btn--primary" href="#contact">Start for Free</a>
 
-        <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -45,311 +48,184 @@
 
     <!-- Mobile drawer -->
     <div class="drawer" id="drawer">
-      <a href="#services">Services</a>
-      <a href="#approach">Approach</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn--primary btn--full" href="#contact">Start Here</a>
+      <a href="#features">Features</a>
+      <a href="#integrations">Integrations</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#blog">Blog</a>
+      <a class="drawer__login" href="#contact">Login</a>
+      <a class="btn btn--primary btn--full" href="#contact">Start for Free</a>
     </div>
   </header>
 
-  <main>
-    <!-- =========================
-         HERO (Sunsama feel)
-         ========================= -->
+  <!-- =========================
+       HERO (matches Sunsama structure)
+       ========================= -->
+  <main id="top" class="main">
     <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <div class="badges">
-            <span class="badge">Operator-led</span>
-            <span class="badge">Implementation-first</span>
-            <span class="badge">Hotels + Restaurants</span>
+      <div class="wrap hero__grid">
+        <!-- LEFT -->
+        <div class="hero__left">
+          <div class="award">
+            <span class="award__pill">Named Best Scheduling Tool by</span>
+            <span class="award__brand">Wirecutter</span>
           </div>
 
           <h1 class="h1">
-            Fix issues.<br>
-            Choose wisely.<br>
-            Deliver change.
+            Start Calm.<br>
+            Stay Focused.<br>
+            Be Confident.
           </h1>
 
-          <p class="subhead">
-            Practical support for owners who want fewer repeat failures, better decisions on tools (POS/PMS/ATS),
-            and rollouts that actually stick.
+          <p class="hero__p">
+            Operator-led consulting for hotels & restaurants. Eliminate repeat failures, choose the right systems,
+            and deliver change properly—so it sticks.
           </p>
 
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#contact">Start a conversation</a>
-            <a class="btn btn--soft" href="#services">See how I work</a>
+            <a class="btn btn--primary" href="#contact">Try for free</a>
+            <span class="hero__micro">14-day free trial · No credit card required</span>
           </div>
 
-          <p class="note">
-            If it doesn’t survive staff turnover, it doesn’t count.
-          </p>
-
-          <div class="logos">
-            <span class="logos__label">Built for real hospitality teams</span>
-            <div class="logos__row" aria-hidden="true">
-              <span class="logoPill">Hotels</span>
-              <span class="logoPill">Restaurants</span>
-              <span class="logoPill">Cafés</span>
-              <span class="logoPill">Multi-site</span>
-              <span class="logoPill">Owner-led</span>
+          <div class="trusted">
+            <div class="trusted__faces" aria-hidden="true">
+              <span class="face"></span><span class="face"></span><span class="face"></span><span class="face"></span>
             </div>
+            <div class="trusted__text">Trusted by professionals who want to do their best work every day.</div>
           </div>
         </div>
 
-        <div class="hero__media">
-          <div class="appFrame" id="heroFrame">
-            <div class="appFrame__top">
-              <span class="appDot"></span><span class="appDot"></span><span class="appDot"></span>
-              <span class="appFrame__title">Operational view (example)</span>
-            </div>
+        <!-- RIGHT -->
+        <div class="hero__right">
+          <div class="shotWrap">
+            <!-- Replace with your real screenshot when ready -->
+            <div class="shot">
+              <div class="shot__top">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="shot__title">Operations view</span>
+              </div>
 
-            <div class="appFrame__body">
-              <!-- Replace this mock with a real screenshot when ready -->
-              <div class="mockGrid">
-                <div class="mockCol">
-                  <div class="mockCard mockCard--thin"></div>
-                  <div class="mockCard"></div>
-                  <div class="mockCard mockCard--thin"></div>
-                </div>
-                <div class="mockCol">
-                  <div class="mockCard mockCard--wide"></div>
-                  <div class="mockRow">
-                    <div class="mockCard"></div>
-                    <div class="mockCard"></div>
+              <div class="shot__body">
+                <div class="ui">
+                  <div class="ui__side">
+                    <div class="ui__row"></div>
+                    <div class="ui__row"></div>
+                    <div class="ui__row"></div>
+                    <div class="ui__row"></div>
+                    <div class="ui__row ui__row--short"></div>
+                  </div>
+
+                  <div class="ui__main">
+                    <div class="ui__cols">
+                      <div class="uiCard"></div>
+                      <div class="uiCard"></div>
+                      <div class="uiCard uiCard--tall"></div>
+                    </div>
+                    <div class="ui__bar"></div>
                   </div>
                 </div>
               </div>
-              <div class="mockBar"></div>
             </div>
           </div>
-
-          <div class="miniStats">
-            <div class="mini">
-              <div class="mini__k">Fix</div>
-              <div class="mini__v">Root cause</div>
-            </div>
-            <div class="mini">
-              <div class="mini__k">Choose</div>
-              <div class="mini__v">Requirements-first</div>
-            </div>
-            <div class="mini">
-              <div class="mini__k">Deliver</div>
-              <div class="mini__v">Adoption</div>
-            </div>
-          </div>
+          <div class="shot__caption">Replace this mock with a real screenshot to fully nail the Sunsama feel.</div>
         </div>
+      </div>
+
+      <!-- logos row -->
+      <div class="wrap logos">
+        <span class="logos__item">HubSpot</span>
+        <span class="logos__item">zapier</span>
+        <span class="logos__item">MIT</span>
+        <span class="logos__item">Y Combinator</span>
+        <span class="logos__item">asana</span>
+        <span class="logos__item">The New York Times</span>
       </div>
     </section>
 
     <!-- =========================
-         PROBLEM / OUTCOME
+         TWO BIG CARDS (like Sunsama section below hero)
          ========================= -->
-    <section class="split">
-      <div class="container split__grid">
-        <article class="card card--soft">
-          <div class="emoji" aria-hidden="true">😵‍💫</div>
-          <h3 class="h3">Where teams get stuck</h3>
-          <ul class="list">
-            <li>“Same issue again” (because the cause never moved)</li>
-            <li>Systems chosen on demos, not requirements</li>
-            <li>Go-lives without training, owners, or cadence</li>
-          </ul>
+    <section class="cards" id="features">
+      <div class="wrap cards__grid">
+        <article class="bigCard">
+          <div class="bigCard__icon" aria-hidden="true">🥵</div>
+          <h2 class="bigCard__h">Work is f***ing chaotic</h2>
+          <div class="bigCard__row">
+            <span class="bigCard__dot bigCard__dot--bad" aria-hidden="true"></span>
+            <span class="bigCard__small">Always on, working late, never done</span>
+          </div>
         </article>
 
-        <article class="card">
-          <div class="mark" aria-hidden="true"></div>
-          <h3 class="h3">What “good” looks like</h3>
-          <ul class="checks">
-            <li>Clear owner per recurring failure</li>
-            <li>SOPs + controls that survive turnover</li>
-            <li>Rollouts designed for adoption</li>
-          </ul>
-          <a class="btn btn--soft btn--small" href="#contact">Get a quick assessment</a>
+        <article class="bigCard bigCard--soft">
+          <div class="bigCard__badge" aria-hidden="true"></div>
+          <h2 class="bigCard__h">Turn chaos into <span class="accent">clarity</span></h2>
+          <div class="bigCard__row">
+            <span class="bigCard__dot bigCard__dot--good" aria-hidden="true"></span>
+            <span class="bigCard__small">End the day on time, feeling accomplished</span>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- =========================
-         SERVICES
-         ========================= -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="kickerRow">
-          <span class="pillKicker">Services</span>
-        </div>
-
-        <h2 class="h2">
-          Built for operators.<br>
-          Focused on outcomes.
-        </h2>
-        <p class="lead">
-          You don’t need more dashboards. You need fewer repeat failures and cleaner execution.
-        </p>
-
-        <div class="featureGrid">
-          <article class="featureCard">
-            <h3 class="h3">Fix recurring failures</h3>
-            <p class="p">Root-cause across people, process, and platform. Remove the trigger, not just the symptom.</p>
-            <div class="featureMini"><span>Issue map</span><span>Owners</span><span>Controls</span></div>
-          </article>
-
-          <article class="featureCard">
-            <h3 class="h3">Choose the right tools</h3>
-            <p class="p">POS / PMS / ATS decisions using requirements, scoring, vendor management, and contract discipline.</p>
-            <div class="featureMini"><span>Requirements</span><span>Shortlist</span><span>Scorecard</span></div>
-          </article>
-
-          <article class="featureCard">
-            <h3 class="h3">Deliver change properly</h3>
-            <p class="p">Rollout plans, training, go-live support, and stabilisation cadence. Adoption is the KPI.</p>
-            <div class="featureMini"><span>Training</span><span>Go-live</span><span>Stabilise</span></div>
-          </article>
-
-          <article class="featureCard">
-            <h3 class="h3">Fractional operator support</h3>
-            <p class="p">Weekly priorities, escalation handling, and a simple operating rhythm owners actually use.</p>
-            <div class="featureMini"><span>Cadence</span><span>Escalations</span><span>Governance</span></div>
-          </article>
-        </div>
+    <!-- Minimal placeholders for nav links -->
+    <section class="section" id="integrations">
+      <div class="wrap">
+        <h3 class="section__h">Integrations</h3>
+        <p class="section__p">POS / PMS / ATS / Finance tools. Replace with your real content later.</p>
       </div>
     </section>
 
-    <!-- =========================
-         APPROACH (rows)
-         ========================= -->
-    <section class="section section--soft" id="approach">
-      <div class="container">
-        <div class="kickerRow">
-          <span class="pillKicker pillKicker--lav">Approach</span>
-        </div>
-
-        <h2 class="h2">Simple, disciplined, repeatable.</h2>
-        <p class="lead">
-          We stabilise first, then improve. Move systems only when the case is clear.
-        </p>
-
-        <div class="rows">
-          <div class="rowCard">
-            <div class="rowCard__title">Triage</div>
-            <div class="rowCard__desc">Top recurring failures, owners, current cadence, and quick wins.</div>
-            <div class="rowCard__dots" aria-hidden="true"><span></span><span></span><span></span></div>
-          </div>
-
-          <div class="rowCard">
-            <div class="rowCard__title">Decision</div>
-            <div class="rowCard__desc">Requirements, shortlist, scoring, vendor challenge, contract clarity.</div>
-            <div class="rowCard__dots" aria-hidden="true"><span></span><span></span><span></span></div>
-          </div>
-
-          <div class="rowCard">
-            <div class="rowCard__title">Delivery</div>
-            <div class="rowCard__desc">Rollout plan, training, go-live support, stabilisation, adoption checks.</div>
-            <div class="rowCard__dots" aria-hidden="true"><span></span><span></span><span></span></div>
-          </div>
-
-          <div class="rowCard">
-            <div class="rowCard__title">Rhythm</div>
-            <div class="rowCard__desc">Weekly operating pack, escalation rules, and governance cadence.</div>
-            <div class="rowCard__dots" aria-hidden="true"><span></span><span></span><span></span></div>
-          </div>
-        </div>
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <h3 class="section__h">Pricing</h3>
+        <p class="section__p">Replace with your pricing later.</p>
       </div>
     </section>
 
-    <!-- =========================
-         LAVENDER CTA BAND (very light)
-         ========================= -->
-    <section class="lavBand">
-      <div class="container lavBand__inner">
-        <div class="lavBand__copy">
-          <h2 class="lavBand__h2">Calm operations, by design.</h2>
-          <p class="lavBand__p">Book a call and I’ll tell you what I’d fix first — plainly.</p>
-        </div>
-        <div class="lavBand__actions">
-          <a class="btn btn--primary" href="#contact">Start here</a>
-          <a class="btn btn--soft" href="#faq">Read FAQs</a>
-        </div>
+    <section class="section" id="about">
+      <div class="wrap">
+        <h3 class="section__h">About</h3>
+        <p class="section__p">Replace with your background later.</p>
       </div>
     </section>
 
-    <!-- =========================
-         FAQ
-         ========================= -->
-    <section class="section" id="faq">
-      <div class="container">
-        <h2 class="h2">FAQ</h2>
-
-        <div class="faq">
-          <details class="qa">
-            <summary>Do you only do systems work?</summary>
-            <div class="qa__body">No. Systems are one lever. The priority is removing repeat failures and stabilising the operation.</div>
-          </details>
-
-          <details class="qa">
-            <summary>Do you implement or advise?</summary>
-            <div class="qa__body">Implementation-first. Advice without adoption is wasted spend.</div>
-          </details>
-
-          <details class="qa">
-            <summary>What does the first engagement look like?</summary>
-            <div class="qa__body">A short diagnostic: top repeat failures, current tool stack, and a practical 30/60/90 plan.</div>
-          </details>
-        </div>
+    <section class="section" id="blog">
+      <div class="wrap">
+        <h3 class="section__h">Blog</h3>
+        <p class="section__p">Replace with your posts later.</p>
       </div>
     </section>
 
-    <!-- =========================
-         CONTACT / BIG CTA
-         ========================= -->
-    <section class="bigCta" id="contact">
-      <div class="container bigCta__inner">
-        <div class="badges badges--center">
-          <span class="badge">Operator-led</span>
-          <span class="badge">Implementation-first</span>
-          <span class="badge">Hospitality</span>
+    <section class="section section--cta" id="contact">
+      <div class="wrap cta">
+        <h3 class="cta__h">Start here</h3>
+        <p class="cta__p">Swap this mailto for Calendly when ready.</p>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="#" data-mailto="Start for Free">Email to book</a>
+          <a class="btn btn--ghost" href="#" data-mailto="General enquiry">General enquiry</a>
         </div>
-
-        <h2 class="bigCta__h2">Make every week count.</h2>
-        <p class="bigCta__p">Start with a short call. You’ll leave with a clear next step.</p>
-
-        <div class="bigCta__buttons">
-          <a class="btn btn--primary" href="#" data-mailto="Book a call">Email to book</a>
-          <a class="btn btn--soft" href="#" data-mailto="General enquiry">General enquiry</a>
-        </div>
-
-        <p class="tiny">No spam. No fluff. Clear execution.</p>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="container footer__inner">
-        <div>
+      <div class="wrap footer__row">
+        <div class="footer__left">
           <div class="footer__brand">
-            <span class="brand__dot" aria-hidden="true"></span>
+            <span class="logo__mark" aria-hidden="true"></span>
             <span>[Your Name]</span>
           </div>
           <div class="footer__small">Hospitality operations consulting</div>
         </div>
 
-        <div class="footer__cols">
-          <div class="footer__col">
-            <div class="footer__k">Pages</div>
-            <a href="#services">Services</a>
-            <a href="#approach">Approach</a>
-            <a href="#faq">FAQ</a>
-          </div>
-
-          <div class="footer__col">
-            <div class="footer__k">Contact</div>
-            <a href="#contact">Book</a>
-            <a href="#" data-mailto="General enquiry">Email</a>
-          </div>
+        <div class="footer__right">
+          <a href="#features">Features</a>
+          <a href="#integrations">Integrations</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
 
-      <div class="container footer__fine">
+      <div class="wrap footer__fine">
         <span>© <span id="year"></span> [Your Name]</span>
         <span>Hosted by you</span>
       </div>

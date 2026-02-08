@@ -1,4 +1,3 @@
-// script.js
 (() => {
   // Year
   const y = document.getElementById("year");
@@ -28,7 +27,7 @@
     el.addEventListener("click", (e) => {
       e.preventDefault();
       const label = el.getAttribute("data-mailto") || "Enquiry";
-      const subject = encodeURIComponent(`${label} — Hospitality consulting`);
+      const subject = encodeURIComponent(`${label} — Consulting`);
       const body = encodeURIComponent("Hi,\n\nHere’s what’s happening:\n\n- \n\nBest,\n");
       window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
