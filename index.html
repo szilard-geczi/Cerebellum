@@ -13,67 +13,66 @@
 </head>
 
 <body>
+  <!-- faint lavender wash like Sunsama (almost invisible) -->
+  <div class="bg" aria-hidden="true"></div>
 
-  <!-- NAV (intentionally minimal, Sunsama-style) -->
   <header class="nav">
-    <div class="nav__inner">
-      <div class="logo">[Your Name]</div>
+    <div class="wrap nav__inner">
+      <div class="nav__left">
+        <a class="brand" href="#top">[Your Name]</a>
+      </div>
 
-      <nav class="nav__links">
+      <nav class="nav__center" aria-label="Primary">
         <a href="#">Product</a>
         <a href="#">How it works</a>
         <a href="#">Pricing</a>
         <a href="#">Blog</a>
       </nav>
 
-      <a class="btn btn--primary" href="#">Start for free</a>
+      <div class="nav__right">
+        <a class="btn btn--primary" href="#">Start for free</a>
+      </div>
     </div>
   </header>
 
-  <!-- =========================
-       SUNSAMA-STYLE HERO
-       ========================= -->
-  <main class="hero">
+  <main id="top" class="hero">
+    <div class="wrap hero__grid">
+      <section class="hero__copy">
+        <h1 class="h1">
+          Start calm.<br>
+          Stay focused.<br>
+          Be confident.
+        </h1>
 
-    <!-- LEFT COPY (sits on white) -->
-    <div class="hero__copy">
-      <h1 class="hero__h1">
-        Start calm.<br>
-        Stay focused.<br>
-        Be confident.
-      </h1>
+        <p class="p">
+          Operator-led consulting for hotels &amp; restaurants. Remove recurring issues, choose
+          the right systems, and deliver change that actually sticks.
+        </p>
 
-      <p class="hero__p">
-        Operator-led consulting for hotels & restaurants.
-        Remove recurring issues, choose the right systems,
-        and deliver change that actually sticks.
-      </p>
-
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#">Start for free</a>
-        <span class="hero__micro">No credit card required</span>
-      </div>
-    </div>
-
-    <!-- RIGHT VISUAL SLAB -->
-    <div class="hero__slab">
-      <div class="hero__shot">
-
-        <!-- Fake browser chrome -->
-        <div class="shot__top">
-          <span></span><span></span><span></span>
+        <div class="cta">
+          <a class="btn btn--primary btn--lg" href="#">Start for free</a>
+          <span class="micro">No credit card required</span>
         </div>
+      </section>
 
-        <!-- Replace this entire block with REAL screenshot later -->
-        <div class="shot__body">
-          <div class="ui ui--sidebar"></div>
-          <div class="ui ui--main"></div>
+      <section class="hero__visual" aria-label="Product preview">
+        <!-- Lavender “frame” -->
+        <div class="frame">
+          <!-- Inner white window -->
+          <div class="window">
+            <div class="window__chrome">
+              <span class="wDot"></span><span class="wDot"></span><span class="wDot"></span>
+            </div>
+
+            <!-- Replace this with your real screenshot later -->
+            <div class="window__body">
+              <div class="mock mock--left"></div>
+              <div class="mock mock--right"></div>
+            </div>
+          </div>
         </div>
-
-      </div>
+      </section>
     </div>
-
   </main>
-
 </body>
 </html>
