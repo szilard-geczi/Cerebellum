@@ -1,76 +1,34 @@
 (() => {
-  // =========================
-  // YEAR
-  // =========================
-  const year = document.getElementById("year");
-  if (year) year.textContent = String(new Date().getFullYear());
+  // Year
+  const y = document.getElementById("year");
+  if (y) y.textContent = String(new Date().getFullYear());
 
-  // =========================
-  // MOBILE DRAWER
-  // =========================
-  const menuBtn = document.getElementById("menuBtn");
+  // Mobile drawer
+  const burger = document.getElementById("burger");
   const drawer = document.getElementById("drawer");
 
-  if (menuBtn && drawer) {
-    menuBtn.addEventListener("click", () => {
+  if (burger && drawer) {
+    burger.addEventListener("click", () => {
       const open = drawer.classList.toggle("open");
-      menuBtn.setAttribute("aria-expanded", String(open));
+      burger.setAttribute("aria-expanded", String(open));
     });
 
     drawer.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => {
         drawer.classList.remove("open");
-        menuBtn.setAttribute("aria-expanded", "false");
+        burger.setAttribute("aria-expanded", "false");
       });
     });
   }
 
-  // =========================
-  // PAGES DROPDOWN (DESKTOP)
-  // =========================
-  const pagesBtn = document.getElementById("pagesBtn");
-  const pagesMenu = document.getElementById("pagesMenu");
-
-  if (pagesBtn && pagesMenu) {
-    pagesBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const hidden = pagesMenu.hasAttribute("hidden");
-      if (hidden) pagesMenu.removeAttribute("hidden");
-      else pagesMenu.setAttribute("hidden", "");
-      pagesBtn.setAttribute("aria-expanded", String(hidden));
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!pagesMenu.contains(e.target) && !pagesBtn.contains(e.target)) {
-        pagesMenu.setAttribute("hidden", "");
-        pagesBtn.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  // =========================
-  // FEATURE IMAGE EMPTY STATE
-  // =========================
-  const frame = document.getElementById("heroFrame");
-  const img = frame ? frame.querySelector("img") : null;
-
-  if (frame && img) {
-    img.addEventListener("error", () => frame.classList.add("is-empty"));
-    if (!img.getAttribute("src")) frame.classList.add("is-empty");
-  }
-
-  // =========================
-  // MAILTO LINKS
-  // =========================
-  const mailBtns = document.querySelectorAll("[data-mailto]");
+  // Mailto buttons
   const to = "info@yourdomain.com"; // CHANGE THIS
-
-  mailBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
+  document.querySelectorAll("[data-mailto]").forEach(el => {
+    el.addEventListener("click", (e) => {
       e.preventDefault();
-      const label = btn.getAttribute("data-mailto") || "Enquiry";
-      const subject = encodeURIComponent(`${label} — Consulting enquiry`);
-      const body = encodeURIComponent("Hi,\n\nHere’s what’s happening:\n\n- \n\nThanks,\n");
+      const label = el.getAttribute("data-mailto") || "Enquiry";
+      const subject = encodeURIComponent(`${label} — Hospitality consulting`);
+      const body = encodeURIComponent("Hi,\n\nHere’s what’s happening:\n\n- \n\nBest,\n");
       window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
   });
