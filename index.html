@@ -13,9 +13,6 @@
 </head>
 
 <body>
-  <!-- faint lavender wash like Sunsama (almost invisible) -->
-  <div class="bg" aria-hidden="true"></div>
-
   <header class="nav">
     <div class="wrap nav__inner">
       <div class="nav__left">
@@ -38,15 +35,18 @@
   <main id="top" class="hero">
     <div class="wrap hero__grid">
       <section class="hero__copy">
+        <!-- Controlled line breaks to match your reference -->
         <h1 class="h1">
-          Start calm.<br>
-          Stay focused.<br>
-          Be confident.
+          <span>Start calm.</span>
+          <span>Stay</span>
+          <span>focused.</span>
+          <span>Be</span>
+          <span>confident.</span>
         </h1>
 
         <p class="p">
-          Operator-led consulting for hotels &amp; restaurants. Remove recurring issues, choose
-          the right systems, and deliver change that actually sticks.
+          Operator-led consulting for hotels &amp; restaurants. Remove recurring issues, choose the right systems,
+          and deliver change that actually sticks.
         </p>
 
         <div class="cta">
@@ -55,20 +55,18 @@
         </div>
       </section>
 
-      <section class="hero__visual" aria-label="Product preview">
-        <!-- Lavender “frame” -->
-        <div class="frame">
-          <!-- Inner white window -->
-          <div class="window">
-            <div class="window__chrome">
-              <span class="wDot"></span><span class="wDot"></span><span class="wDot"></span>
-            </div>
+      <section class="hero__visual" aria-label="Preview">
+        <!-- Floating image (NO frame) -->
+        <div class="floatShot">
+          <div class="shotChrome" aria-hidden="true">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
 
-            <!-- Replace this with your real screenshot later -->
-            <div class="window__body">
-              <div class="mock mock--left"></div>
-              <div class="mock mock--right"></div>
-            </div>
+          <!-- Replace with a real screenshot later:
+               <img class="shotImg" src="your-screenshot.png" alt="Product preview"> -->
+          <div class="shotMock" aria-hidden="true">
+            <div class="mockLeft"></div>
+            <div class="mockRight"></div>
           </div>
         </div>
       </section>
