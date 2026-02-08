@@ -49,7 +49,7 @@
   }
 
   // =========================
-  // HERO IMAGE EMPTY STATE
+  // FEATURE IMAGE EMPTY STATE
   // =========================
   const frame = document.getElementById("heroFrame");
   const img = frame ? frame.querySelector("img") : null;
@@ -60,7 +60,7 @@
   }
 
   // =========================
-  // MAILTO BUTTONS
+  // MAILTO LINKS
   // =========================
   const mailBtns = document.querySelectorAll("[data-mailto]");
   const to = "info@yourdomain.com"; // CHANGE THIS
