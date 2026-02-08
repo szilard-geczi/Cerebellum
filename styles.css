@@ -139,6 +139,8 @@ a{
   letter-spacing: -0.05em;
   line-height: 0.95;
   font-size: clamp(58px, 5.8vw, 92px);
+  display: block;
+  margin-bottom: 32px; /* ⬅️ increase/decrease this */
 }
 .hero__h1 span{
   display: block;
