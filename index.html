@@ -3,10 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>[Your Name] — Start Calm. Stay Focused. Be Confident.</title>
-  <meta name="description" content="Operator-led consulting for hotels & restaurants. Fix recurring issues, choose the right tools, deliver change properly." />
+  <title>[Your Name]</title>
 
-  <!-- Typography (Sunsama-like) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,223 +13,67 @@
 </head>
 
 <body>
-  <!-- Very light lavender wash (global) -->
-  <div class="bg" aria-hidden="true"></div>
 
-  <!-- =========================
-       NAV (Sunsama layout)
-       ========================= -->
+  <!-- NAV (intentionally minimal, Sunsama-style) -->
   <header class="nav">
-    <div class="wrap nav__row">
-      <a class="logo" href="#top" aria-label="Home">
-        <span class="logo__mark" aria-hidden="true"></span>
-        <span class="logo__text">[Your Name]</span>
-      </a>
+    <div class="nav__inner">
+      <div class="logo">[Your Name]</div>
 
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#features">Features</a>
-        <a href="#integrations">Integrations</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
+      <nav class="nav__links">
+        <a href="#">Product</a>
+        <a href="#">How it works</a>
+        <a href="#">Pricing</a>
+        <a href="#">Blog</a>
       </nav>
 
-      <div class="nav__actions">
-        <a class="nav__login" href="#contact">Login</a>
-        <a class="btn btn--primary" href="#contact">Start for Free</a>
-
-        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile drawer -->
-    <div class="drawer" id="drawer">
-      <a href="#features">Features</a>
-      <a href="#integrations">Integrations</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#about">About</a>
-      <a href="#blog">Blog</a>
-      <a class="drawer__login" href="#contact">Login</a>
-      <a class="btn btn--primary btn--full" href="#contact">Start for Free</a>
+      <a class="btn btn--primary" href="#">Start for free</a>
     </div>
   </header>
 
   <!-- =========================
-       HERO (matches Sunsama structure)
+       SUNSAMA-STYLE HERO
        ========================= -->
-  <main id="top" class="main">
-    <section class="hero">
-      <div class="wrap hero__grid">
-        <!-- LEFT -->
-        <div class="hero__left">
-          <div class="award">
-            <span class="award__pill">Named Best Scheduling Tool by</span>
-            <span class="award__brand">Wirecutter</span>
-          </div>
+  <main class="hero">
 
-          <h1 class="h1">
-            Start Calm.<br>
-            Stay Focused.<br>
-            Be Confident.
-          </h1>
+    <!-- LEFT COPY (sits on white) -->
+    <div class="hero__copy">
+      <h1 class="hero__h1">
+        Start calm.<br>
+        Stay focused.<br>
+        Be confident.
+      </h1>
 
-          <p class="hero__p">
-            Operator-led consulting for hotels & restaurants. Eliminate repeat failures, choose the right systems,
-            and deliver change properly—so it sticks.
-          </p>
+      <p class="hero__p">
+        Operator-led consulting for hotels & restaurants.
+        Remove recurring issues, choose the right systems,
+        and deliver change that actually sticks.
+      </p>
 
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="#contact">Try for free</a>
-            <span class="hero__micro">14-day free trial · No credit card required</span>
-          </div>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#">Start for free</a>
+        <span class="hero__micro">No credit card required</span>
+      </div>
+    </div>
 
-          <div class="trusted">
-            <div class="trusted__faces" aria-hidden="true">
-              <span class="face"></span><span class="face"></span><span class="face"></span><span class="face"></span>
-            </div>
-            <div class="trusted__text">Trusted by professionals who want to do their best work every day.</div>
-          </div>
+    <!-- RIGHT VISUAL SLAB -->
+    <div class="hero__slab">
+      <div class="hero__shot">
+
+        <!-- Fake browser chrome -->
+        <div class="shot__top">
+          <span></span><span></span><span></span>
         </div>
 
-        <!-- RIGHT -->
-        <div class="hero__right">
-          <div class="shotWrap">
-            <!-- Replace with your real screenshot when ready -->
-            <div class="shot">
-              <div class="shot__top">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="shot__title">Operations view</span>
-              </div>
-
-              <div class="shot__body">
-                <div class="ui">
-                  <div class="ui__side">
-                    <div class="ui__row"></div>
-                    <div class="ui__row"></div>
-                    <div class="ui__row"></div>
-                    <div class="ui__row"></div>
-                    <div class="ui__row ui__row--short"></div>
-                  </div>
-
-                  <div class="ui__main">
-                    <div class="ui__cols">
-                      <div class="uiCard"></div>
-                      <div class="uiCard"></div>
-                      <div class="uiCard uiCard--tall"></div>
-                    </div>
-                    <div class="ui__bar"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="shot__caption">Replace this mock with a real screenshot to fully nail the Sunsama feel.</div>
-        </div>
-      </div>
-
-      <!-- logos row -->
-      <div class="wrap logos">
-        <span class="logos__item">HubSpot</span>
-        <span class="logos__item">zapier</span>
-        <span class="logos__item">MIT</span>
-        <span class="logos__item">Y Combinator</span>
-        <span class="logos__item">asana</span>
-        <span class="logos__item">The New York Times</span>
-      </div>
-    </section>
-
-    <!-- =========================
-         TWO BIG CARDS (like Sunsama section below hero)
-         ========================= -->
-    <section class="cards" id="features">
-      <div class="wrap cards__grid">
-        <article class="bigCard">
-          <div class="bigCard__icon" aria-hidden="true">🥵</div>
-          <h2 class="bigCard__h">Work is f***ing chaotic</h2>
-          <div class="bigCard__row">
-            <span class="bigCard__dot bigCard__dot--bad" aria-hidden="true"></span>
-            <span class="bigCard__small">Always on, working late, never done</span>
-          </div>
-        </article>
-
-        <article class="bigCard bigCard--soft">
-          <div class="bigCard__badge" aria-hidden="true"></div>
-          <h2 class="bigCard__h">Turn chaos into <span class="accent">clarity</span></h2>
-          <div class="bigCard__row">
-            <span class="bigCard__dot bigCard__dot--good" aria-hidden="true"></span>
-            <span class="bigCard__small">End the day on time, feeling accomplished</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Minimal placeholders for nav links -->
-    <section class="section" id="integrations">
-      <div class="wrap">
-        <h3 class="section__h">Integrations</h3>
-        <p class="section__p">POS / PMS / ATS / Finance tools. Replace with your real content later.</p>
-      </div>
-    </section>
-
-    <section class="section" id="pricing">
-      <div class="wrap">
-        <h3 class="section__h">Pricing</h3>
-        <p class="section__p">Replace with your pricing later.</p>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="wrap">
-        <h3 class="section__h">About</h3>
-        <p class="section__p">Replace with your background later.</p>
-      </div>
-    </section>
-
-    <section class="section" id="blog">
-      <div class="wrap">
-        <h3 class="section__h">Blog</h3>
-        <p class="section__p">Replace with your posts later.</p>
-      </div>
-    </section>
-
-    <section class="section section--cta" id="contact">
-      <div class="wrap cta">
-        <h3 class="cta__h">Start here</h3>
-        <p class="cta__p">Swap this mailto for Calendly when ready.</p>
-        <div class="cta__actions">
-          <a class="btn btn--primary" href="#" data-mailto="Start for Free">Email to book</a>
-          <a class="btn btn--ghost" href="#" data-mailto="General enquiry">General enquiry</a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="wrap footer__row">
-        <div class="footer__left">
-          <div class="footer__brand">
-            <span class="logo__mark" aria-hidden="true"></span>
-            <span>[Your Name]</span>
-          </div>
-          <div class="footer__small">Hospitality operations consulting</div>
+        <!-- Replace this entire block with REAL screenshot later -->
+        <div class="shot__body">
+          <div class="ui ui--sidebar"></div>
+          <div class="ui ui--main"></div>
         </div>
 
-        <div class="footer__right">
-          <a href="#features">Features</a>
-          <a href="#integrations">Integrations</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
-        </div>
       </div>
+    </div>
 
-      <div class="wrap footer__fine">
-        <span>© <span id="year"></span> [Your Name]</span>
-        <span>Hosted by you</span>
-      </div>
-    </footer>
   </main>
 
-  <script src="script.js"></script>
 </body>
 </html>
