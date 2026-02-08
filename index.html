@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>[Your Name]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Your Name] — Hospitality Analytics</title>
 
+  <!-- Inter (Sunsama-style typography) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,13 +14,14 @@
 </head>
 
 <body>
+  <!-- NAV -->
   <header class="nav">
     <div class="wrap nav__inner">
       <div class="nav__left">
-        <a class="brand" href="#top">[Your Name]</a>
+        <span class="brand">[Your Name]</span>
       </div>
 
-      <nav class="nav__center" aria-label="Primary">
+      <nav class="nav__center">
         <a href="#">Product</a>
         <a href="#">How it works</a>
         <a href="#">Pricing</a>
@@ -32,11 +34,13 @@
     </div>
   </header>
 
-  <main id="top" class="hero">
+  <!-- HERO -->
+  <main class="hero">
     <div class="wrap hero__grid">
+
+      <!-- LEFT COPY -->
       <section class="hero__copy">
-        <!-- Controlled line breaks to match your reference -->
-        <h1 class="h1">
+        <h1 class="hero__h1">
           <span>Start calm.</span>
           <span>Stay</span>
           <span>focused.</span>
@@ -44,32 +48,30 @@
           <span>confident.</span>
         </h1>
 
-        <p class="p">
-          Operator-led consulting for hotels &amp; restaurants. Remove recurring issues, choose the right systems,
-          and deliver change that actually sticks.
+        <p class="hero__p">
+          A SaaS analytics platform for hospitality operators.
+          See what’s really happening across revenue, labour, and operations —
+          and act before issues repeat.
         </p>
 
-        <div class="cta">
+        <div class="hero__cta">
           <a class="btn btn--primary btn--lg" href="#">Start for free</a>
-          <span class="micro">No credit card required</span>
+          <span class="hero__micro">No credit card required</span>
         </div>
       </section>
 
-      <section class="hero__visual" aria-label="Preview">
-        <!-- Floating image (NO frame) -->
+      <!-- RIGHT VISUAL -->
+      <section class="hero__visual" aria-label="Dashboard preview">
         <div class="floatShot">
-          <div class="shotChrome" aria-hidden="true">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          </div>
-
-          <!-- Replace with a real screenshot later:
-               <img class="shotImg" src="your-screenshot.png" alt="Product preview"> -->
-          <div class="shotMock" aria-hidden="true">
-            <div class="mockLeft"></div>
-            <div class="mockRight"></div>
-          </div>
+          <!-- Replace src with your real dashboard screenshot -->
+          <img
+            class="shotImg"
+            src="assets/dashboard.png"
+            alt="Hospitality analytics dashboard preview"
+          />
         </div>
       </section>
+
     </div>
   </main>
 </body>
